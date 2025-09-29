@@ -1,0 +1,13 @@
+.payhip-iframe-wrapper {
+    width: 100%;
+    min-height: 800px;
+    position: relative;
+}
+
+.payhip-iframe {
+    width: 100%;
+    min-height: 800px;
+    border: none;
+    border-radius: 12px;
+    background: white;
+}

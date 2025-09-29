@@ -217,3 +217,25 @@ h1 {
     font-size: 18px;
   }
 }
+
+/** PAYHIP EMBED */
+.product-embed-section {
+  margin: 30px 0;
+}
+
+.payhip-embed-page {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.payhip-embed-page.featured-product {
+  border: 2px solid rgba(102, 126, 234, 0.3);
+  box-shadow: 0 8px 32px rgba(102, 126, 234, 0.2);
+}
+
+.products-section {
+  margin-top: 40px;
+}
