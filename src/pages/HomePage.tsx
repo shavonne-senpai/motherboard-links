@@ -61,9 +61,11 @@ export function HomePage() {
                 {/* Header */}
                 <header className="header">
                     <div className="logo">🧠</div>
-                    <h1>Motherboard HQ</h1>
+                    <h1>Chaos-coded prompts for moms doing too f*cking much</h1>
                     <p className="tagline">
-                        ChatGPT prompts for moms who are tired of being everyone's human database
+                        AI won’t fix your life. But it can help you meal plan while your toddler bites you.
+                        Built by a Black mom drowning in diapers, dev work, and dirty dishes.
+                        Try 5 free prompts. Or grab the full chaos system.
                     </p>
                 </header>
 
