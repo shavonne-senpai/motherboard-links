@@ -1,4 +1,4 @@
-import './assets/PayhipEmbed.css'
+import '../assets/PayhipEmbed.css'
 
 interface PayhipEmbedProps {
     productKey: string

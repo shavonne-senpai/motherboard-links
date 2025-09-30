@@ -1,135 +1,160 @@
-import { Link } from 'react-router-dom'
-import '../assets/HomePage.css'
+import { Link } from 'react-router-dom';
+import '../assets/HomePage.css';
+import img0to6 from '../images/0-6 Cover.png';
 
 interface ProductLink {
-    title: string
-    description: string
-    path: string
-    badge?: string
-    image?: string
+  title: string
+  description: string
+  path: string
+  badge?: string
+  image?: string
 }
 
 interface ResourceLink {
-    title: string
-    subtitle: string
-    url: string
+  title: string
+  subtitle: string
+  url: string
 }
 
 export function HomePage() {
-    const products: ProductLink[] = [
-        {
-            title: "The Vault",
-            description: "Searchable library of ChatGPT prompts for every chaotic parenting moment",
-            path: "/vault",
-            image: "/vault-preview.jpg"
-        },
-        {
-            title: "Free Prompt Sampler",
-            description: "Try before you buy — 10 most-used prompts",
-            path: "/sampler",
-            badge: "Free"
-        },
-        {
-            title: "Prompt Pack (PDF)",
-            description: "One-time download, organized by situation",
-            path: "/pack"
-        }
-    ]
-
-    const resources: ResourceLink[] = [
-        {
-            title: "ChatGPT Quick Start Guide",
-            subtitle: "Never used AI? Start here",
-            url: "#guide"
-        },
-        {
-            title: "Blog / Use Cases",
-            subtitle: "Real examples + screenshots",
-            url: "#blog"
-        }
-    ]
-
-    const social = {
-        instagram: "https://instagram.com/motherboardhq",
-        tiktok: "https://tiktok.com/@motherboardhq",
-        email: "mailto:hello@motherboardhq.com"
+  const products: ProductLink[] = [
+    {
+      title: '0–6 Month Edition',
+      description: 'Prompts for foggy nights, contact naps, and 2AM spirals.',
+      path: '/0-6',
+      image: img0to6
+    },
+    {
+      title: '6–12 Month Edition',
+      description: 'Solids, sleep regressions, and why is everyone crying?',
+      path: '/6-12',
+      image: img0to6
+    },
+    {
+      title: '12–36 Month Edition',
+      description: 'Big feelings. Small humans. No instructions. This helps.',
+      path: '/12-36',
+      image: '/images/12-36.jpg'
+    },
+    {
+      title: 'Mom Edition',
+      description: 'Prompts for your brain, not your baby. Mental load relief.',
+      path: '/mom',
+      image: '/images/mom.jpg'
+    },
+    {
+      title: 'Free Sampler',
+      description: '5 chaos-coded prompts to try before you commit.',
+      path: '/sampler',
+      badge: 'Free',
+      image: '/images/sampler.jpg'
     }
+  ]
 
-    return (
-        <div className="home-page">
-            <div className="container">
-                {/* Header */}
-                <header className="header">
-                    <div className="logo">🧠</div>
-                    <h1>Chaos-coded prompts for moms doing too f*cking much</h1>
-                    <p className="tagline">
-                        AI won’t fix your life. But it can help you meal plan while your toddler bites you.
-                        Built by a Black mom drowning in diapers, dev work, and dirty dishes.
-                        Try 5 free prompts. Or grab the full chaos system.
-                    </p>
-                </header>
+  const resources: ResourceLink[] = [
+    {
+      title: 'AI Quick Start for Moms',
+      subtitle: 'Zero jargon. Just copy-paste and survive.',
+      url: '#guide'
+    },
+    {
+      title: 'Prompt Demos + Use Cases',
+      subtitle: 'Real chaos. Real screenshots.',
+      url: '#blog'
+    }
+  ]
 
-                {/* Products Grid */}
-                <section className="products-grid">
-                    {products.map((product, index) => (
-                        <Link
-                            key={index}
-                            to={product.path}
-                            className={`product-link-card ${index === 0 ? 'featured' : ''}`}
-                        >
-                            {product.badge && <span className="product-badge">{product.badge}</span>}
+  const social = {
+    instagram: 'https://instagram.com/motherboardhq',
+    tiktok: 'https://tiktok.com/@motherboardhq',
+    email: 'mailto:support@motherboardhq.com'
+  }
 
-                            {product.image && (
-                                <div className="product-preview-image">
-                                    <img src={product.image} alt={product.title} />
-                                </div>
-                            )}
+  return (
+    <div className="home-page">
+      <div className="container">
+        {/* Header */}
+        <header className="header">
+          <div className="logo">MHQ</div>
+          <h1>Survival scripts for moms spiraling in real-time</h1>
+          <p className="tagline">
+            Nova won't fix your life. But she might keep you from cry-folding laundry at midnight.
+            <br />
+            Built by a tired Black mom with dev skills, a baby monitor, and one brain cell left.
+            <br />
+            Try 5 free prompts. Or grab the full meltdown vault.
+          </p>
 
-                            <div className="product-link-content">
-                                <h3>{product.title}</h3>
-                                <p>{product.description}</p>
-                                <span className="view-details">View Details →</span>
-                            </div>
-                        </Link>
-                    ))}
-                </section>
+          {/* CTA Block */}
+          <a href="/sampler" className="main-cta">
+            <div className="label">Freebie</div>
+            <div className="title">Try the Chaos Sampler</div>
+            <div className="description">5 emotional support prompts from the Mom Vault. Zero strings.</div>
+          </a>
+        </header>
 
-                {/* Resources Section */}
-                <section className="links-section">
-                    <h2 className="section-title">Resources</h2>
-                    {resources.map((link, index) => (
-                        <a key={index} href={link.url} className="link-button">
-                            <div className="link-content">
-                                <div className="link-title">{link.title}</div>
-                                <div className="link-subtitle">{link.subtitle}</div>
-                            </div>
-                            <div className="link-arrow">→</div>
-                        </a>
-                    ))}
-                </section>
+        {/* Products Grid */}
+        <section className="products-grid">
+          {products.map((product, index) => (
+            <Link
+              key={index}
+              to={product.path}
+              className={`product-link-card ${index === 0 ? 'featured' : ''}`}
+            >
+              {product.badge && <span className="product-badge">{product.badge}</span>}
+              {product.image && (
+                <div className="product-preview-image">
+                  <img src={product.image} alt={product.title} />
+                </div>
+              )}
+              <div className="product-link-content">
+                <h3>{product.title}</h3>
+                <p>{product.description}</p>
+                <span className="view-details">Open the vault →</span>
+              </div>
+            </Link>
+          ))}
+        </section>
 
-                {/* Connect Section */}
-                <section className="links-section">
-                    <h2 className="section-title">Connect</h2>
-                    <a href="#email" className="link-button">
-                        <div className="link-content">
-                            <div className="link-title">Join the Email List</div>
-                            <div className="link-subtitle">Weekly prompts + chaos survival tips</div>
-                        </div>
-                        <div className="link-arrow">→</div>
-                    </a>
-                </section>
+        {/* Resources */}
+        <section className="links-section">
+          <h2 className="section-title">Resources</h2>
+          {resources.map((link, index) => (
+            <a key={index} href={link.url} className="link-button">
+              <div className="link-content">
+                <div className="link-title">{link.title}</div>
+                <div className="link-subtitle">{link.subtitle}</div>
+              </div>
+              <div className="link-arrow">→</div>
+            </a>
+          ))}
+        </section>
 
-                {/* Footer */}
-                <footer className="footer">
-                    <div className="social-links">
-                        <a href={social.instagram}>Instagram</a>
-                        <a href={social.tiktok}>TikTok</a>
-                        <a href={social.email}>Email</a>
-                    </div>
-                    <div className="copyright">© 2025 Motherboard HQ</div>
-                </footer>
+        {/* Connect */}
+        <section className="links-section">
+          <h2 className="section-title">Connect</h2>
+          <a href="#email" className="link-button">
+            <div className="link-content">
+              <div className="link-title">Join the Email List</div>
+              <div className="link-subtitle">Weekly prompts, parenting spirals, survival tools</div>
             </div>
-        </div>
-    )
+            <div className="link-arrow">→</div>
+          </a>
+        </section>
+
+        {/* Footer */}
+        <footer className="footer">
+          <div className="social-links">
+            <a href={social.instagram}>Instagram</a>
+            <a href={social.tiktok}>TikTok</a>
+            <a href={social.email}>Email</a>
+          </div>
+          <div className="copyright">© 2025 Motherboard HQ</div>
+          <p className="footer-tagline">
+            Nova is not a brand. She's your digital goblin. She doesn't fix it — she just vibes beside your meltdown.
+          </p>
+        </footer>
+      </div>
+    </div>
+  )
 }

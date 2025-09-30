@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { PayhipEmbed } from '../PayhipEmbed'
 import '../assets/ProductPage.css'
+import { PayhipEmbed } from '../components/PayhipEmbed'
 
 interface ProductPageProps {
     payhipKey: string
