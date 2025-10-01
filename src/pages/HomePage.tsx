@@ -13,11 +13,11 @@ interface ProductLink {
   image?: string
 }
 
-interface ResourceLink {
-  title: string
-  subtitle: string
-  url: string
-}
+//interface ResourceLink {
+  //title: string
+  //subtitle: string
+  //url: string
+//}
 
 export function HomePage() {
   const products: ProductLink[] = [
