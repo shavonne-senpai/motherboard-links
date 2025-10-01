@@ -46,8 +46,8 @@ body {
 }
 
 h1 {
-  font-size: 28px;
-  margin-bottom: 8px;
+  font-size: 30px;
+  margin-bottom: 12px;
   font-weight: 700;
   letter-spacing: -0.5px;
 }
@@ -55,9 +55,15 @@ h1 {
 .tagline {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.7);
-  line-height: 1.5;
+  line-height: 1.75;
   max-width: 400px;
   margin: 0 auto;
+}
+
+.sampler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Main CTA */

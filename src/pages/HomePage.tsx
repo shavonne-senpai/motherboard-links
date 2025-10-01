@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
 import '../assets/HomePage.css';
-import img0to6 from '../images/0-6 Cover.png';
+import img0to6 from '../images/0to6.png';
+import img12to36 from '../images/12to36.png';
+import img6to12 from '../images/6to12.png';
+import imgMom from '../images/mom.png';
 
 interface ProductLink {
   title: string
@@ -28,27 +31,20 @@ export function HomePage() {
       title: '6–12 Month Edition',
       description: 'Solids, sleep regressions, and why is everyone crying?',
       path: '/6-12',
-      image: img0to6
+      image: img6to12
     },
     {
       title: '12–36 Month Edition',
       description: 'Big feelings. Small humans. No instructions. This helps.',
       path: '/12-36',
-      image: '/images/12-36.jpg'
+      image: img12to36
     },
     {
       title: 'Mom Edition',
       description: 'Prompts for your brain, not your baby. Mental load relief.',
       path: '/mom',
-      image: '/images/mom.jpg'
+      image: imgMom
     },
-    {
-      title: 'Free Sampler',
-      description: '5 chaos-coded prompts to try before you commit.',
-      path: '/sampler',
-      badge: 'Free',
-      image: '/images/sampler.jpg'
-    }
   ]
 
   const resources: ResourceLink[] = [
@@ -86,7 +82,7 @@ export function HomePage() {
           </p>
 
           {/* CTA Block */}
-          <a href="/sampler" className="main-cta">
+          <a href="https://motherboardhq.kit.com/955a888096" className="main-cta">
             <div className="label">Freebie</div>
             <div className="title">Try the Chaos Sampler</div>
             <div className="description">5 emotional support prompts from the Mom Vault. Zero strings.</div>
@@ -99,7 +95,7 @@ export function HomePage() {
             <Link
               key={index}
               to={product.path}
-              className={`product-link-card ${index === 0 ? 'featured' : ''}`}
+              className="product-link-card"
             >
               {product.badge && <span className="product-badge">{product.badge}</span>}
               {product.image && (
@@ -117,7 +113,7 @@ export function HomePage() {
         </section>
 
         {/* Resources */}
-        <section className="links-section">
+        {/* <section className="links-section">
           <h2 className="section-title">Resources</h2>
           {resources.map((link, index) => (
             <a key={index} href={link.url} className="link-button">
@@ -128,10 +124,10 @@ export function HomePage() {
               <div className="link-arrow">→</div>
             </a>
           ))}
-        </section>
+        </section> */}
 
         {/* Connect */}
-        <section className="links-section">
+        {/* <section className="links-section">
           <h2 className="section-title">Connect</h2>
           <a href="#email" className="link-button">
             <div className="link-content">
@@ -140,19 +136,16 @@ export function HomePage() {
             </div>
             <div className="link-arrow">→</div>
           </a>
-        </section>
+        </section> */}
 
         {/* Footer */}
         <footer className="footer">
           <div className="social-links">
             <a href={social.instagram}>Instagram</a>
-            <a href={social.tiktok}>TikTok</a>
+            {/* <a href={social.tiktok}>TikTok</a> */}
             <a href={social.email}>Email</a>
           </div>
           <div className="copyright">© 2025 Motherboard HQ</div>
-          <p className="footer-tagline">
-            Nova is not a brand. She's your digital goblin. She doesn't fix it — she just vibes beside your meltdown.
-          </p>
         </footer>
       </div>
     </div>
