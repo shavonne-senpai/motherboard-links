@@ -47,18 +47,18 @@ export function HomePage() {
     },
   ]
 
-  const resources: ResourceLink[] = [
-    {
-      title: 'AI Quick Start for Moms',
-      subtitle: 'Zero jargon. Just copy-paste and survive.',
-      url: '#guide'
-    },
-    {
-      title: 'Prompt Demos + Use Cases',
-      subtitle: 'Real chaos. Real screenshots.',
-      url: '#blog'
-    }
-  ]
+  //const resources: ResourceLink[] = [
+    //{
+      //title: 'AI Quick Start for Moms',
+      //subtitle: 'Zero jargon. Just copy-paste and survive.',
+      //url: '#guide'
+    //},
+    //{
+      //title: 'Prompt Demos + Use Cases',
+      //subtitle: 'Real chaos. Real screenshots.',
+      //url: '#blog'
+    //}
+  //]
 
   const social = {
     instagram: 'https://instagram.com/motherboardhq',
